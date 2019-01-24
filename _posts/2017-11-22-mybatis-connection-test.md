@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Spring MVC - MyBatis 설정 및 테스트
-category: Spring-MVC
+category: spring-mvc
 tags: spring-mvc mybatis
 key: 20171122a
 cover: /assets/post-cover/spring/spring.png
