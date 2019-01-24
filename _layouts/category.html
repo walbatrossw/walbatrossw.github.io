@@ -1,0 +1,10 @@
+---
+layout: article
+---
+
+{% for category in site.categories %}
+  <h2> -
+    <a href="/categories/{{ category | first }}">{{ category | first }}</a>
+    <a class="button button--primary button--pill" href="/categories/{{ category | first }}">{{ category | last | size }}</a>
+  </h2>
+{% endfor %}
