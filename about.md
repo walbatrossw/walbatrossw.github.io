@@ -13,7 +13,7 @@ titles:
   zh-Hant : &ZH_HANT  關於
   zh-TW   : *ZH_HANT
   zh-HK   : *ZH_HANT
-  ko      : &KO       소개
+  ko      : &KO       About DoubleS
   ko-KR   : *KO
 key: page-about
 ---
