@@ -3,8 +3,18 @@ layout: article
 title: IntelliJ에서 Spring MVC Project 생성하기
 category: spring-mvc
 tags: spring-mvc intellij maven
-key: 2017112201
+cover: /assets/cover/spring.png
+key: 20171122a
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /assets/cover/spring-article.png
 ---
+
+<!--more-->
 
 IntelliJ에서는 STS(Spring Tool Suite)처럼 Spring MVC Project를 생성하는 방법이 따로 존재하는 것 같지 않다.
 구글링을 통해 참고한 내용들을 바탕으로 직접 IntelliJ에서 Spring Mvc Project를 생성하는 과정을 정리해보았다.

@@ -3,7 +3,7 @@ layout: article
 title: HTTP 상태코드 정리
 category: network
 tag: http
-key: 2018030701
+key: 20180307b
 ---
 
 

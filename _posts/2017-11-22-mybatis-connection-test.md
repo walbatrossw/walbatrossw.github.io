@@ -3,9 +3,18 @@ layout: article
 title: Spring MVC - MyBatis 설정 및 테스트
 category: spring-mvc
 tags: spring-mvc mybatis
-key: 2017112202
+cover: /assets/cover/spring.png
+key: 20171122b
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /assets/cover/spring-article.png
 ---
 
+<!--more-->
 
 > 본 포스팅은 [코드로 배우는스프링 웹프로젝트](http://www.yes24.com/24/goods/19720776?scode=032&OzSrank=1)를 참조하여 작성한 내용입니다. 개인적으로 학습한 내용을 복습하기 위해 기록한 내용이기 때문에 오류가 있다면 지적 부탁드리겠습니다.
 
