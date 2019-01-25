@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Controller 작성 연습, WAS 없이 컨트롤러 테스트
+date: 2017-11-25 00:00:00
 category: spring-mvc
 tags: spring-mvc controller test
 key: 20171125a

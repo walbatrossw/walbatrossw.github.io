@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Spring-MVC 게시판 예제 01 - 프로젝트 생성 및 세팅
+date: 2017-11-28 00:00:00
 category: spring-mvc
 tags: spring-mvc maven
 key: 20171128a

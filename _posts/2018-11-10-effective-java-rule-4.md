@@ -1,8 +1,25 @@
+---
+layout: article
+title: 이펙티브 자바 4. 객체 생성을 막을 때는 private 생성자를 사용
+date: 2018-11-10 03:00:00 # 작성 시간 2018-11-08 00:00:00
+category: java
+tags: java effective-java
+cover: # 커버 이미지 /assets/cover/파일명.png
+key: 20181108d
+article_header: # 헤더 이미지
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: # 커버이미지 /assets/cover/파일명.png
+---
+
+<!--more-->
+
 > 본 글은 [이펙티브 자바 2nd](https://book.naver.com/bookdb/book_detail.nhn?bid=8064518)를
 읽고 개인적으로 학습한 내용을 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다.
 오류가 있다면 지적 부탁드리겠습니다.
-
-# rule 4. 객체 생성을 막을 때는 `private` 생성자를 사용
 
 유틸 클래스(정적 메서드, 필드만 모은 클래스)는 객체를 만들 목적의 클래스가 아니기 때문에
 생성자가 필요하지 않다. 하지만 생성자를 생략하면 컴파일러가 기본 생성자를 만들어버리기

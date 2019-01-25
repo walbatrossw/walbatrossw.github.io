@@ -1,14 +1,26 @@
 ---
 layout: article
-title:  rule 7. 종료자 사용을 피할 것
-cover: /assets/post-cover/java/effective-java.jpg
+title: 이펙티브 자바 7. 종료자 사용을 피할 것
+date: 2018-11-29 00:00:00 # 작성 시간 2018-11-08 00:00:00
+category: java
+tags: java effective-java
+cover: # 커버 이미지 /assets/cover/파일명.png
+key: 20181129a
+article_header: # 헤더 이미지
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: # 커버이미지 /assets/cover/파일명.png
 ---
+
+<!--more-->
 
 > 본 글은 [이펙티브 자바 2nd](https://book.naver.com/bookdb/book_detail.nhn?bid=8064518)를
 읽고 개인적으로 학습한 내용을 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다.
 오류가 있다면 지적 부탁드리겠습니다.
 
-# rule 7. 종료자 사용을 피할 것
 
 종료자(finalize)는 예측이 불가능하며, 대체로 위험하고, 일반적으로 불필요하다. 종료자를
 사용하면 시스템 오류, 성능 문제, 이식성 문제가 발생할 수 있다. 그렇기 때문에 종료자 사용은

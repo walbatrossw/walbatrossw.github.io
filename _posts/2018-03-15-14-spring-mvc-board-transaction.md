@@ -44,7 +44,7 @@ Spring-MVC 게시판 예제 관련 포스팅 링크
 8. [페이징처리 개선, 목록페이지 정보 유지](https://walbatrossw.github.io/spring/mvc/2018/03/02/08-spring-mvc-board-paging-enhancement-tip.html)
 9. [프로젝트 구조 변경 및 수정사항](https://walbatrossw.github.io/spring/mvc/2018/03/04/09-spring-mvc-board-project-structure-modification.html)
 10. [검색처리, 동적 SQL](https://walbatrossw.github.io/spring/mvc/2018/03/07/10-spring-mvc-board-search-dynamic-sql.html)
-11. |[AJAX 댓글처리 : Persistence, Business, Control 계층](https://walbatrossw.github.io/spring/mvc/2018/03/11/11-spring-mvc-board-ajax-reply-persistence-business-control.html)
+11. [AJAX 댓글처리 : Persistence, Business, Control 계층](https://walbatrossw.github.io/spring/mvc/2018/03/11/11-spring-mvc-board-ajax-reply-persistence-business-control.html)
 12. [AJAX 댓글처리 : Presentation 계층](https://walbatrossw.github.io/spring/mvc/2018/03/13/12-spring-mvc-board-ajax-reply-presentation.html)
 13. [AOP를 이용한 LogAdvice 작성](https://walbatrossw.github.io/spring/mvc/2018/03/14/13-spring-mvc-board-aop-logging.html)
 

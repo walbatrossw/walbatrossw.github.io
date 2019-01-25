@@ -1,11 +1,12 @@
 ---
 layout: article
 title: # 제목
+date: # 작성 시간 2019-00-00 00:00:00
 category: # 카테고리
 tags: # 태그
 cover: # 커버 이미지 /assets/cover/파일명.png
 key: # for gitalk
-article_header:
+article_header: # 헤더 이미지
   type: overlay
   theme: dark
   background_color: '#203028'

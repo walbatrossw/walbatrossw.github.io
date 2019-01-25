@@ -1,6 +1,7 @@
 ---
 layout: article
 title: SpringMVC + MyBatis, DAO구현 테스트
+date: 2017-11-22 03:00:00
 category: spring-mvc
 tags: spring-mvc mybatis mysql sql-mapper
 cover: /assets/cover/spring.png

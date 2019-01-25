@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Spring-MVC 게시판 예제 02 - Bootstrap(AdminLTE) 템플릿 세팅
+date: 2017-11-28 02:00:00
 category: spring-mvc
 tags: spring-mvc bootstrap adminlte include
 key: 20171128b

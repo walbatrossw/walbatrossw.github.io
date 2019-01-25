@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Spring MVC 구조
+date: 2017-11-25 01:00:00
 category: spring-mvc
 tag: spring-mvc
 key: 20171125b

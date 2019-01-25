@@ -1,10 +1,21 @@
 ---
 layout: article
 title: 이펙티브 자바 1. 정적 팩터리 메서드 사용 - 생성자 대신
+date: 2018-11-08 00:00:00 # 작성 시간 2018-11-08 00:00:00
 category: java
 tags: java effective-java
-key: 20190101
+cover: # 커버 이미지 /assets/cover/파일명.png
+key: 20181108a
+article_header: # 헤더 이미지
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: # 커버이미지 /assets/cover/파일명.png
 ---
+
+<!--more-->
 
 > 본 글은 [이펙티브 자바 2nd](https://book.naver.com/bookdb/book_detail.nhn?bid=8064518)를
 읽고 개인적으로 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다. 오류가 있다면

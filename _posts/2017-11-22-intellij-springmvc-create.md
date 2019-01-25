@@ -1,6 +1,7 @@
 ---
 layout: article
 title: IntelliJ에서 Spring MVC Project 생성하기
+date: 2017-11-22 00:00:00
 category: spring-mvc
 tags: spring-mvc intellij maven
 cover: /assets/cover/spring.png

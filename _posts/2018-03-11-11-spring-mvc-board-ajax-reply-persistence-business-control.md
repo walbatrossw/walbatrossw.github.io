@@ -2,7 +2,7 @@
 layout: article
 title: Spring-MVC 게시판 예제 11 - 댓글처리(영속, 비지니스, 컨트롤 계층 구현)
 category: spring-mvc
-tag: spring-mvc ajax reply Overloaded POST
+tags: spring-mvc ajax reply Overloaded-Post
 key: 20180311a
 cover: /assets/cover/spring.png
 article_header:
