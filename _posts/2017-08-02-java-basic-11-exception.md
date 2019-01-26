@@ -7,6 +7,8 @@ tags: java java-basic exception # 태그
 key: 20170802c # for gitalk
 ---
 
+<!--more-->
+
 본 내용은 자바의 정석 3rd Edition을 참고하여 작성되었습니다. 개인적으로 학습한 내용을 복습하기 목적이기 때문에 내용상 오류가 있을 수 있습니다.
 
 ## 1. 예외처리(Exception Handling)
