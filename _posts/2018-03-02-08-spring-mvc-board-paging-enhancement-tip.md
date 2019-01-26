@@ -4,14 +4,6 @@ title: Spring-MVC 게시판 예제 08 - 페이징처리 개선, 게시글 조회
 category: spring-mvc
 tags: spring-mvc paging UriComponentsBuilder
 key: 20180302b
-cover: /assets/cover/spring.png
-article_header:
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /assets/cover/spring-article.png
 ---
 
 <!--more-->

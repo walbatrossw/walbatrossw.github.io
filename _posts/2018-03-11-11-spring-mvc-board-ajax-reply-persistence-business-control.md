@@ -4,14 +4,6 @@ title: Spring-MVC 게시판 예제 11 - 댓글처리(영속, 비지니스, 컨�
 category: spring-mvc
 tags: spring-mvc ajax reply Overloaded-Post
 key: 20180311a
-cover: /assets/cover/spring.png
-article_header:
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /assets/cover/spring-article.png
 ---
 
 <!--more-->

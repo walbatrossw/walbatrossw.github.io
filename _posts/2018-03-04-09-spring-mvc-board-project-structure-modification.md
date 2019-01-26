@@ -4,14 +4,6 @@ title: Spring-MVC 게시판 예제 09 - 프로젝트 구조 변경 및 수정사
 category: spring-mvc
 tags: spring-mvc
 key: 20180304a
-cover: /assets/cover/spring.png
-article_header:
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /assets/cover/spring-article.png
 ---
 
 <!--more-->

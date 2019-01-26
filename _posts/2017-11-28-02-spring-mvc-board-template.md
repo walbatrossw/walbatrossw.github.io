@@ -5,14 +5,6 @@ date: 2017-11-28 02:00:00
 category: spring-mvc
 tags: spring-mvc bootstrap adminlte include
 key: 20171128b
-cover: /assets/cover/spring.png
-article_header:
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /assets/cover/spring-article.png
 ---
 
 <!--more-->

@@ -4,14 +4,6 @@ title: Spring-MVC 게시판 예제 03 - 기본적인 CRUD 구현(Presistence, Bu
 category: spring-mvc
 tags: spring-mvc crud
 key: 20180226a
-cover: /assets/cover/spring.png
-article_header:
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /assets/cover/spring-article.png
 ---
 
 <!--more-->

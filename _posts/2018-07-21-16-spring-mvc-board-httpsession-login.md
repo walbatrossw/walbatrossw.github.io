@@ -4,14 +4,6 @@ title: Spring-MVC 게시판 예제 16 - HttpSession을 이용하는 로그인 �
 category: spring-mvc
 tags: spring-mvc httpSession
 key: 20180721b
-cover: /assets/cover/spring.png
-article_header:
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /assets/cover/spring-article.png
 ---
 
 <!--more-->
@@ -51,6 +43,7 @@ Spring-MVC 게시판 예제 관련 포스팅 링크
 14. [댓글 갯수, 게시글 조회수 구현, 트랜잭션처리](https://walbatrossw.github.io/spring/mvc/2018/03/15/14-spring-mvc-board-transaction.html)
 15. [AJAX방식의 게시판 첨부파일 기능 구현](https://walbatrossw.github.io/spring/mvc/2018/07/21/15-spring_mvc-board-fileupload.html)
 
+---
 
 앞서 살펴본 Interceptor에서 통해 HttpSession 객체를 이용하여 게시판에 로그인을 처리하는 것을 정리해보자.
 

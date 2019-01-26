@@ -1,10 +1,13 @@
 ---
 layout: article
 title: 우분투 & 윈도우 듀얼 부팅시 세팅해야할 것들
+date: 2018-11-29 01:00:00 # 작성 시간 2018-11-08 00:00:00
 category: ubuntu
-tag: ubuntu
+tags: ubuntu
 key: 20181129b
+
 ---
+
 
 
 ## 1. 우분투 & 윈도우 듀얼 부팅 시간 설정

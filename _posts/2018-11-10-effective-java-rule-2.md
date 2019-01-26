@@ -1,19 +1,13 @@
 ---
 layout: article
-title: 이펙티브 자바 2. Builder 패턴의 사용 - 생성자의 인자가 많을 때
+title: 이펙티브 자바2nd - 객체 생성과 삭제 2
 date: 2018-11-10 00:00:00 # 작성 시간 2018-11-08 00:00:00
 category: java
 tags: java effective-java
-cover: # 커버 이미지 /assets/cover/파일명.png
 key: 20181110b
-article_header: # 헤더 이미지
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: # 커버이미지 /assets/cover/파일명.png
 ---
+
+# Rule 2. 생성자의 인자가 많을 때 Builder 패턴의 사용
 
 <!--more-->
 

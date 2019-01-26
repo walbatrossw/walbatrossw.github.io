@@ -1,10 +1,12 @@
 ---
 layout: article
 title: 우분투 18.04 & 윈도우10 듀얼 부팅 설치 및 설정
+date: 2018-11-29 00:00:00 # 작성 시간 2018-11-08 00:00:00
 category: ubuntu
-tag: ubuntu
-key: 20181129a
+tags: ubuntu
+key: 20181129b
 ---
+
 
 ## 1. 설치 준비
 

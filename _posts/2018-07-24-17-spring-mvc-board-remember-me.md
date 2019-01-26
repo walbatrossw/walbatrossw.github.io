@@ -4,14 +4,6 @@ title: Spring-MVC 게시판 예제 17 - 자동로그인 기능 및 로그아웃 
 category: spring-mvc
 tags: spring-mvc remember-me
 key: 20180724a
-cover: /assets/cover/spring.png
-article_header:
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /assets/cover/spring-article.png
 ---
 
 <!--more-->
@@ -45,12 +37,14 @@ Spring-MVC 게시판 예제 관련 포스팅 링크
 8. [페이징처리 개선, 목록페이지 정보 유지](https://walbatrossw.github.io/spring/mvc/2018/03/02/08-spring-mvc-board-paging-enhancement-tip.html)
 9. [프로젝트 구조 변경 및 수정사항](https://walbatrossw.github.io/spring/mvc/2018/03/04/09-spring-mvc-board-project-structure-modification.html)
 10. [검색처리, 동적 SQL](https://walbatrossw.github.io/spring/mvc/2018/03/07/10-spring-mvc-board-search-dynamic-sql.html)
-11. |[AJAX 댓글처리 : Persistence, Business, Control 계층](https://walbatrossw.github.io/spring/mvc/2018/03/11/11-spring-mvc-board-ajax-reply-persistence-business-control.html)
+11. [AJAX 댓글처리 : Persistence, Business, Control 계층](https://walbatrossw.github.io/spring/mvc/2018/03/11/11-spring-mvc-board-ajax-reply-persistence-business-control.html)
 12. [AJAX 댓글처리 : Presentation 계층](https://walbatrossw.github.io/spring/mvc/2018/03/13/12-spring-mvc-board-ajax-reply-presentation.html)
 13. [AOP를 이용한 LogAdvice 작성](https://walbatrossw.github.io/spring/mvc/2018/03/14/13-spring-mvc-board-aop-logging.html)
 14. [댓글 갯수, 게시글 조회수 구현, 트랜잭션처리](https://walbatrossw.github.io/spring/mvc/2018/03/15/14-spring-mvc-board-transaction.html)
 15. [AJAX방식의 게시판 첨부파일 기능 구현](https://walbatrossw.github.io/spring/mvc/2018/07/21/15-spring_mvc-board-fileupload.html)
 16. [HttpSession을 이용하는 로그인 처리](https://walbatrossw.github.io/spring/mvc/2018/07/21/16-spring-mvc-board-httpsession-login.html)
+
+---
 
 자동로그인을 구현해보자.
 
