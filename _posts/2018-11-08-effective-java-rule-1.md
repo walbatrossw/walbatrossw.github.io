@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 이펙티브 자바2nd - 객체 생성과 삭제 1
+title: Effective Java - 1. 생성자 대신 정적 팩터리 메서드 사용
 date: 2018-11-08 00:00:00 # 작성 시간 2018-11-08 00:00:00
 category: java
 tags: java effective-java

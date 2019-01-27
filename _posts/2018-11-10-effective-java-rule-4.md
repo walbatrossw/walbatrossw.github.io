@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 이펙티브 자바2nd - 객체 생성과 삭제 4
+title: Effective Java - 4. 객체 생성을 막을 때는 private 생성자를 사용
 date: 2018-11-10 03:00:00 # 작성 시간 2018-11-08 00:00:00
 category: java
 tags: java effective-java

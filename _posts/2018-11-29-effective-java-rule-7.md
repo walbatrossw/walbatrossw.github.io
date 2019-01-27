@@ -1,18 +1,10 @@
 ---
 layout: article
-title: 이펙티브 자바2nd - 객체 생성과 삭제 7
+title: Effective Java - 7. 종료자 사용을 피할 것
 date: 2018-11-29 00:00:00 # 작성 시간 2018-11-08 00:00:00
 category: java
 tags: java effective-java
-cover: # 커버 이미지 /assets/cover/파일명.png
 key: 20181129a
-article_header: # 헤더 이미지
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: # 커버이미지 /assets/cover/파일명.png
 ---
 
 # Rule 7. 종료자 사용을 피할 것
