@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Java - 컬렉션 프레임워크(Collection Framework) Collections # 제목
+title: Java Collection Framework - Collections # 제목
 date: 2018-02-16 05:00:00 # 작성 시간 2019-00-00 00:00:00
 category: java # 카테고리
 tags: java java-basic collection-framework Collections # 태그
@@ -11,10 +11,13 @@ key: 20180216f # for gitalk
 
 본 내용은 자바의 정석 3rd Edition을 참고하여 작성되었습니다. 개인적으로 학습한 내용을 복습하기 목적이기 때문에 내용상 오류가 있을 수 있습니다.
 
-## `Collections`란?
+## 1. Collections란?
 `Arrays`가 배열과 관련된 메서드를 제공하는 것처럼, `Collections`는 컬렉션과 관련된 메서드를 제공한다. `fill()`, `copy()`, `sort()`, `binarySearch()` 등의 메서드는 두 클래스에서 모두 포함되어 있으며 같은 기능을 수행한다.
 
-##### `Collections`예제 1
+## 2. Collections 예제
+
+### 2.1 예제 1
+
 ```java
 public class CollectionEx1 {
     public static void main(String[] args) {
@@ -72,7 +75,8 @@ public class CollectionEx1 {
     }
 }
 ```
-```
+
+```console
 []
 [1, 2, 3, 4, 5]
 [4, 5, 1, 2, 3]

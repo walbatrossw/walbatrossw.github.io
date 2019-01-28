@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Java - 컬렉션 프레임워크(Collection Framework) HashMap # 제목
+title: Java Collection Framework - HashMap # 제목
 date: 2018-02-16 02:00:00 # 작성 시간 2019-00-00 00:00:00
 category: java # 카테고리
 tags: java java-basic collection-framework HashMap # 태그
@@ -11,7 +11,8 @@ key: 20180216c # for gitalk
 
 본 내용은 자바의 정석 3rd Edition을 참고하여 작성되었습니다. 개인적으로 학습한 내용을 복습하기 목적이기 때문에 내용상 오류가 있을 수 있습니다.
 
-## `HashMap`이란?
+## 1. HashMap이란?
+
 `HashMap`은 `Map`인터페이스를 구현했기 때문에 `Map`과 같이 **키(key)와 값(value)을 묶어서 하나의 데이터(entry)로 저장** 한다. 그리고 **해싱(Hashing)을 사용하기 때문에 많은 양의 데이터를 검색하는데 있어서 뛰어난 성능** 을 보인다.
 
 ```java
@@ -45,11 +46,14 @@ class Entry {
 
 `HashMap`은 **키와 값을 각각 `Object`타입으로 저장** 한다, 즉 `(Object, Object)`의 형태로 저장하기 때문에 어떠한 객체도 저장할 수 있지만 **키는 주로 `String`을 대문자로 또는 소문자로 통일해서 사용** 하곤 한다.
 
-**키(key)와 값(value)**
+키(key)와 값(value)
 - 키(key) : 컬렉션 내의 키(key)중에서 유일해야한다.
 - 값(value) : 키(key)와 달리 데이터의 중복을 허용한다.
 
-##### `HashMap`예제 1 : `HashMap`을 이용해 id, pw 인증 해보기 - `containKey()`
+## 2. HashMap 예제
+
+### 2.1 예제 1 : HashMap을 이용해 id, pw 인증 해보기 - containKey()
+
 ```java
 public class HashMapEx1 {
     public static void main(String[] args) {
@@ -85,7 +89,8 @@ public class HashMapEx1 {
     }
 }
 ```
-```
+
+```conole
 id와 pw를 입력해주세요
 id : doublea
 pw : 1234
@@ -97,7 +102,8 @@ pw : 1234
 
 id와 pw가 일치합니다.
 ```
-```
+
+```console
 id와 pw를 입력해주세요
 id : doublek
 pw : 1111
@@ -109,12 +115,14 @@ pw : 1234
 
 id와 pw가 일치합니다.
 ```
+
 - `HashMap`을 생성하고 id와 pw을 키와 값의 쌍으로 저장한 다음, 입력받은 id를 key로 `HashMap`에서 검색해서 얻은 비밀번호을 입력받은 비밀번호와 비교하는 예제이다.
 - 3개의 데이터 쌍을 저장했지만 실제로는 2개 밖에 저장되지 않은 이유는 중복된 키가 있기 때문이다.
 - 세번째로 저장한 데이터의 키인 `doublek`는 이미 존재하기 떄문에 새로 추가되는 대신 기존의 값을 덮어씌우게 된다.
 - `Map`의 값은 중복을 허용하지만 키는 중복을 허용하지 않는다.
 
-##### `HashMap`예제 2 : 데이터 저장, 읽기(`etrySet()`, `keySet()`, `values()`)
+### 2.2 예제 2 : 데이터 저장, 읽기(etrySet(), keySet(), values())
+
 ```java
 public class HashMapEx2 {
     public static void main(String[] args) {
@@ -154,7 +162,8 @@ public class HashMapEx2 {
     }
 }
 ```
-```
+
+```console
 name : doubleE, score : 80
 name : doubleD, score : 80
 name : doubleS, score : 95
@@ -167,11 +176,13 @@ average : 80.166664
 max : 95
 min : 66
 ```
+
 - `entrySet()` : `HashMap`에 저장된 값을 엔트리(키와 값의 결합)의 형태로 `Set`에 저장해서 반환
 - `keySet()` : `HashMap`에 저장된 모든 키가 저장된 `Set`을 반환
 - `values()` : `HashMap`에 저장된 모든 값을 컬렉션의 형태로 반환
 
-##### `HashMap`예제 3 : 전화번호부 만들기 : `HashMap`안에 또다른 `HashMap`
+### 2.3 예제 3 : 전화번호부 만들기 : HashMap 안에 또다른 HashMap
+
 ```java
 public class HashMapEx3 {
 
@@ -228,7 +239,8 @@ public class HashMapEx3 {
     }
 }
 ```
-```
+
+```console
 * etc[1]
 market 070-1121-5432
 
@@ -243,12 +255,14 @@ yoon 010-1234-1234
 seo 010-4321-4321
 kim 010-1111-1234
 ```
+
 - `HashMap`은 키와 값 모두 Object타입으로 데이터를 저장하기 때문에 `HashMap`의 값으로 `HashMap`을 다시 저장할 수 있다.
 - 이렇게 함으로써 하나의 키에 다시 복수의 데이터를 저장할 수 있게 된다.
 - 전화번호 그룹을 만들고 그 그룹안에 다시 이름과 전화번호를 저장할 수 있게 된다.
 - 이름대신 전화번호를 키로 사용했는데 이름은 동명이인이 있을 수 있지만 전화번호는 유일하기 때문이다.
 
-##### `HashMap`예제 4 : `HashMap`을 이용해 그래프 표현해보기
+### 2,4 예제 4 : HashMap을 이용해 그래프 표현해보기
+
 ```java
 public class HashMapEx4 {
     public static void main(String[] args) {
@@ -286,17 +300,20 @@ public class HashMapEx4 {
     }
 }
 ```
-```
+
+```console
 A : ### 3
 D : ## 2
 Z : # 1
 K : ###### 6
 ```
+
 - 문자열 배열에 담기 문자열을 하나씩 읽어 `HashMap`에 키로 저장하고 값으로 1을 저장한다.
 - `HashMap`에 같은 문자열이 키로 저장되어 있는지 `containsKey()`로 확인하고 저장되어 있으면 문자열의 값에 1을 증가시킨다.
 - `HashMap`에 저장된 결과를 `printBar()`를 이용해 그래프로 표현한다.
 
-##### 해싱(Hashing)?
+## 3. 해싱(Hashing)?
+
 해싱이란 **해시함수(hash function)를 이용해서 데이터를 해시테이블(hash table)에 저장하고 검색하는 기법** 을 말한다. 해시함수는 데이터가 저장되어 있는 곳을 알려주기 때문에 다량의 데이터 중에서도 원하는 데이터를 빠르게 찾을 수 있다. 해싱을 구현한 컬렉션 클래스로는 `HashSet`, `HashMap`, `HashTable` 등이 있다.
 
 ![hashing](https://raw.githubusercontent.com/walbatrossw/TIL/master/03_pl/java/stadard-of-java/11_collection_framework/img/hashing.png)

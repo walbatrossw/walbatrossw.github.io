@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Java - 컬렉션 프레임워크(Collection Framework) Properties # 제목
+title: Java Collection Framework - Properties # 제목
 date: 2018-02-16 04:00:00 # 작성 시간 2019-00-00 00:00:00
 category: java # 카테고리
 tags: java java-basic collection-framework Properties # 태그
@@ -11,11 +11,15 @@ key: 20180216e # for gitalk
 
 본 내용은 자바의 정석 3rd Edition을 참고하여 작성되었습니다. 개인적으로 학습한 내용을 복습하기 목적이기 때문에 내용상 오류가 있을 수 있습니다.
 
-## `Properties`란?
+## 1. Properties란?
+
 `Properties`는 `HashMap`의 구버전인 `Hashtable`을 상속받아 구현한 것으로, `Hashtable`은 키와 값을 `(Object, Object)`의 형태로 저장하는데 비해 **`Properties`는 `(String, String)`형태로 저장하는 보다 단순화된 컬렉션 클래스** 이다.
 **주로 애플리케이션의 환경설정과 관련된 속성을 저장하는데 사용되며 데이터를 파일로부터 읽고 쓰는 편리한 기능을 제공한다.** 그래서 간단한 입출력은 `Properties`를 활용하면 몇 줄의 코드로 쉽게 해결할 수 있다.
 
-##### `Properties`예제 1 : 저장, 읽기, 출력
+## 2. Properties 예제
+
+### 2.1 Properties 예제 1 : 저장, 읽기, 출력
+
 ```java
 public class PropertiesEx1 {
     public static void main(String[] args) {
@@ -49,7 +53,8 @@ public class PropertiesEx1 {
     }
 }
 ```
-```
+
+```console
 capacity=10
 size=10
 timeout=30
@@ -66,6 +71,7 @@ size=20
 timeout=30
 language=kr
 ```
+
 - `properties`의 기본적인 메서드를 이용해서 저장하고, 읽어오고, 출력하는 방법을 보여주는 예제이다.
 - 데이터를 저장하는데 사용되는 `setProperty()`는 단순히 `Hashtable`의 `put`메서드를 호출한다.
 - `setProperty()`는 기존에 같은 키로 저장된 값이 있는 경우 그 값을 `Object`타입으로 반환하며, 그렇지 않을 경우 `null`을 반환한다.
