@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Java - 컬렉션 프레임워크(Collection Framework) Comparator, Comparable # 제목
+title: Java Collection Framework - Comparator, Comparable # 제목
 date: 2018-02-15 01:00:00 # 작성 시간 2019-00-00 00:00:00
 category: java # 카테고리
 tags: java java-basic collection-framework Comparator Comparable # 태그
