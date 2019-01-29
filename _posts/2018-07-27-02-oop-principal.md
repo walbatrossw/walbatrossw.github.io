@@ -1,6 +1,7 @@
 ---
 layout: article
 title: 객체지향의 원리
+date: 2018-07-27 01:00:00 # 작성 시간 2019-00-00 00:00:00
 category: oop
 tags: OOP
 key: 20180727b

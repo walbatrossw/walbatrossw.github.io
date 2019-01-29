@@ -1,6 +1,7 @@
 ---
 layout: article
 title: 객체 지향 모델링
+date: 2018-07-27 00:00:00 # 작성 시간 2019-00-00 00:00:00
 category: oop
 tags: OOP modeling
 key: 20180727a

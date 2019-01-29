@@ -368,3 +368,268 @@ com.doubles.standardofjava.ch14_lambda_stream.part01_lambda.LambdaEx2$$Lambda$3/
 com.doubles.standardofjava.ch14_lambda_stream.part01_lambda.LambdaEx2$$Lambda$4/999966131@7699a589
 com.doubles.standardofjava.ch14_lambda_stream.part01_lambda.LambdaEx2$$Lambda$5/1480010240@4dd8dc3
 ```
+
+## 5. java.util.function 패키지
+
+대부분의 메서드는 타입이 비슷하기 때문에 제네릭으로 정의하면 매개변수나 반환타입이 달라도 문제가 되지 않는다.
+그래서 `java.util.function`패키지에 일반적으로 쓰이는 형식의 메서드를 함수형 인터페이스로 미리 정의해 놓았다.
+매번 함수형 인터페이스를 정의하지 말고, 이 패키지의 인터페이스를 활용하는 것이 좋다.
+
+### 5.1 기본적인 함수형 인터페이스
+
+|함수형 인터페이스|메서드|설명|
+|---|---|---|
+|`java.lang.Runnable`|`void run()`|매개변수 X, 리턴값 O|
+|`Supplier<T>`|`T get()`|매개변수 X, 리턴값 O|
+|`Consumer<T>`|`void accept(T t)`|매개변수 O, 리턴값 X|
+|`Function<T>`|`R apply(T t)`|일반적인 함수, 매개변수 1개, 리턴값 O|
+|`Predicate<T>`|`boolean test(T t)`|조건식 표현에 사용, 매개변수 1개, 리턴값(`boolean`)|
+
+### 5.1 조건식에 사용되는 Predicate
+Predicate는 Function의 변형으로 리턴타입이 `boolean`이라는 것만 다르다. Predicate는 조건식을
+람다식으로 표현하는데 사용된다.
+
+```java
+Predicate<String> isEmptyStr = s -> s.length() ==0;
+String s = "";
+if (isEmptyStr.test(s)) {
+  System.out.println("s is an empty String.");
+}
+```
+
+### 5.2 매개변수가 두 개인 함수형 인터페이스
+매개변수가 2개인 함수형 인터페이스는 이름 앞에 접두사 "Bi"가 붙는다.
+
+|함수형 인터페이스|메서드|설명|
+|---|---|---|
+|`BiConsumer<T, U>`|`void accept(T t, U u)`|매개변수 2개, 리턴값 X|
+|`BiPredicate<T, U>`|`boolean test(T t, U u)`|조건식 표현에 사용, 매개변수 2개, 리턴값(boolean)|
+|`BiFunction<T, U, R>`|`R apply(T t, U u)`|매개변수 2개, 리턴값 O|
+
+만약 두 개 이상의 매개변수를 갖는 함수형 인터페이스가 필요하다면 직접 만들어 써야한다. 만일 3개의 매개변수를
+갖는 함수형 인터페이스를 선언한다면 아래의 코드와 같이 작성할 수 있다.
+
+```java
+@FunctionalInterface
+interface TriFunction<T, U, V, R> {
+  R reply(T t, U u, V v);
+}
+```
+
+### 5.3 UnaryOperator와 BinaryOperator
+Function의 또 다른 변형으로 UnaryOperator와 BinaryOperator가 있는데, 이 매개변수의 타입과 반환타입의
+타입이 모두 일치한다는 점만 제외하고는 Function과 같다.
+
+|함수형 인터페이스|메서드|설명|
+|---|---|---|
+|`UnaryOperator<T>`|`T apply(T t)`|Function의 자손, Funtion과 다르게 매개변수와 결과 타입이 같음|
+|`BinaryOperator<T>`|`R test(T t, T t)`|BiFunction의 자손, BiFunction과 달리 매개변수와 결과 타입이 같음|
+
+### 5.4 컬렉션프레임워크와 함수형 인터페이스
+컬레션 프레임워크의 인터페이스에 다수의 디폴트 메서드가 추가되었는데, 그 중에서 일부는 함수형 인터페이스를 사용한다.
+
+|인터페이스|메서드|설명|
+|---|---|---|
+|`Collection`|`boolean remove(Predicate<T> filter)`|조건에 맞는 요소 삭제|
+|`List`|`void replaceAll(UnaryOperator<E> operater)`|모든 요소를 변환하여 대체|
+|`Iterable`|`void forEach(Consumer<T> action)`|모든 요소에 작업 action을 수행|
+|`Map`|`V compute(K key, BiFunction<K, V, V> f)`|지정된 키의 값에 작업 f를 수행|
+|`Map`|`V computeIfAbsent(K key, BiFunction<K, V> f)`|키가 없으면, 작업 f 수행 후 추가|
+|`Map`|`V computeIfPresent(K key, BiFunction<K, V, V> f)`|지정된 키가 있을 때, 작업 f 수행|
+|`Map`|`V merge(K key, V value, BiFunction<V, V, V> f)`|모든 요소에 병합작업 f를 수행|
+|`Map`|`void forEach(BiConsumer<K, V> action)`|모든 요소에 작업 action을 수행|
+|`Map`|`void replaceAll(BiFunction<K, V, V>) f`|모든 요소에 치환작업 f를 수행|
+
+
+### 5.5 함수형 인터페이스 예제
+
+#### 5.5.1 예제 1 : 컬렉션 프레임워크 함수형 인터페이스
+
+```java
+// 컬렉션 프레임워크 함수형 인터페이스
+public class LambdaEx4 {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        // 0 ~ 9까지 저장
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+
+        // 모든 요소 출력
+        list.forEach(i -> System.out.print(i + ", "));
+        System.out.println();
+
+        // 2의 배수, 3의 배수 제거
+        list.removeIf(x -> x % 2 == 0 || x % 3 == 0);
+        System.out.println(list);
+
+        list.replaceAll(i -> i * 10);   // 각 요소에 10을 곱한다
+        System.out.println(list);
+
+        // map의 모든 요소를 {k, v} 형식으로 출력
+        Map<String, String> map = new HashMap<>();
+        map.put("1", "1");
+        map.put("2", "2");
+        map.put("3", "3");
+        map.put("4", "4");
+        map.forEach((k, v) -> System.out.print("{" + k + ", " + v + "} , "));
+        System.out.println();
+    }
+}
+```
+
+```console
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+[1, 5, 7]
+[10, 50, 70]
+{1, 1} , {2, 2} , {3, 3} , {4, 4} ,
+```
+
+
+#### 5.5.2 예제 1 : 함수형 인터페이스
+
+```java
+// 함수형 인터페이스
+public class LambdaEx5 {
+    public static void main(String[] args) {
+
+        Supplier<Integer> s = () -> (int) (Math.random() * 100) + 1;
+        Consumer<Integer> c = i -> System.out.print(i + ", ");
+        Predicate<Integer> p = i -> i % 2 == 0;
+        Function<Integer, Integer> f = i -> i / 10 * 10;    // i의 일의 자리 제거
+
+        List<Integer> list = new ArrayList<>();
+        makeRandomList(s, list);
+        System.out.println(list);
+
+        printEvenNum(p, c, list);
+        List<Integer> newList = doSomething(f, list);
+        System.out.println(newList);
+
+    }
+
+    private static <T> List<T> doSomething(Function<T, T> f, List<T> list) {
+        List<T> newList = new ArrayList<>(list.size());
+        for (T i : list) {
+            newList.add(f.apply(i));
+        }
+        return newList;
+    }
+
+    private static <T> void printEvenNum(Predicate<T> p, Consumer<T> c, List<T> list) {
+        System.out.print("[");
+        for (T i : list) {
+            if (p.test(i))
+                c.accept(i);
+        }
+        System.out.println("]");
+    }
+
+    private static <T> void makeRandomList(Supplier<T> s, List<T> list) {
+        for (int i = 0; i < 10; i++) {
+            list.add(s.get());
+        }
+    }
+
+}
+```
+
+```console
+[64, 9, 29, 40, 70, 90, 76, 33, 85, 75]
+[64, 40, 70, 90, 76, ]
+[60, 0, 20, 40, 70, 90, 70, 30, 80, 70]
+```
+
+### 5.6 기본형을 사용하는 함수형 인터페이스
+
+함수형 인터페이스는 매개변수와 리턴값의 타입이 모두 제네릭이었지만 기본형 타입의 값을 처리할 때도 래퍼(Warpper)
+클래스를 사용해왔다. 기본형 대신 래퍼클래스를 사용하는 것은 당연히 비효율적이다. 그래서 보다 효율적으로 처리할 수
+있도록 기본형을 사용하는 함수형 인터페이스들이 제공된다.
+
+|함수형 인터페이스|메서드|설명|
+|---|---|---|
+|`DoubleToIntFunction`|`int applyAsInt(double d)`|AtoBFunction은 입력이 A타입 출력이 B타입|
+|`ToIntFunction<T>`|`int applyAsInt(T value)`|ToBFunction은 출력이 B타입, 입력은 제네릭 타입|
+|`IntFunction<R>`|`R apply(int value)`|AFunction은 입력이 A타입, 출력은 제네릭 타입|
+|`ObjIntConsumer<T>`|`void accept(T t, int i)`|ObjAFuction은 입력이 T, int타입, 출력은 X|
+
+#### 5.6.1 예제
+
+```java
+public class LambdaEx6 {
+    public static void main(String[] args) {
+        IntSupplier s = () -> (int) (Math.random() * 100);
+        IntConsumer c = i -> System.out.print(i + ", ");
+        IntPredicate p = i -> i % 2 == 0;
+        IntUnaryOperator op = i -> i / 10 * 10;
+
+        int[] arr = new int[10];
+
+        makeRandomList(s, arr);
+        System.out.println(Arrays.toString(arr));
+
+        printEvenNum(p, c, arr);
+
+        int[] newArr = doSomething(op, arr);
+        System.out.println(Arrays.toString(newArr));
+    }
+
+    private static void makeRandomList(IntSupplier s, int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = s.getAsInt();
+        }
+    }
+
+    private static void printEvenNum(IntPredicate p, IntConsumer c, int[] arr) {
+        System.out.print("[");
+        for (int i : arr) {
+            if (p.test(i))
+                c.accept(i);
+        }
+        System.out.println("]");
+    }
+
+    private static int[] doSomething(IntUnaryOperator op, int[] arr) {
+        int[] newArr = new int[arr.length];
+        for (int i = 0; i < newArr.length; i++) {
+            newArr[i] = op.applyAsInt(arr[i]);
+        }
+        return newArr;
+    }
+}
+```
+
+```console
+[23, 37, 72, 44, 40, 27, 89, 14, 13, 42]
+[72, 44, 40, 14, 42, ]
+[20, 30, 70, 40, 40, 20, 80, 10, 10, 40]
+```
+
+## 6. Function의 합성과 Predicate의 결합
+
+```java
+// Function
+default <V> Function<T, V> andThen(Function<? super R, ? extends V> after);
+default <V> Function<V, R> compose(Function<? super V, ? extends T> before);
+static <T> Function<T, T> identify();
+```
+
+```java
+// Predicate
+default Predicate<T> and(Function<? super T> other);
+default Predicate<T> or(Function<? super T> other);
+default Predicate<T> negate();
+static <T> Function<T, T> isEqual(Object targetRef);
+```
+
+### 6.1 Function의 합성
+수학에서 두 함수를 합성해서 하나의 새로운 함수를 만들어 낼 수 있는 것처럼, 두 람다식을 합성해서 새로운 람다식을
+만들 수 있다. 두 함수의 합성은 어느 함수를 먼저 적용하느냐에 따라 달라진다. 함수 `f`, `g`가 있을 때, `f.andThen(g)`는
+함수 `f`를 먼저 적용하고, 그 다음에 함수 `g`를 적용한다. 그리고 `f.compose(g)`는 반대로 `g`를 먼저 적용하고
+`f`를 적용한다.
+
+
+### 6.2 Predicate의 결합
+
+## 7. 메서드 참조
