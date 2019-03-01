@@ -1,4 +1,17 @@
-# Binary Heaps(이진힙)
+---
+layout: article
+title: 자료구조 - Binary Heap
+category: data-structure
+tags: data-structure binary-heap
+key: 20181107a
+---
+
+<!--more-->
+
+> 본 글은 [Udemy의 자바 자료구조 강의](https://www.udemy.com/algorithms-and-data-structures/)를 듣고 개인적으로 학습한 내용 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다. 오류가 있다면 지적 부탁 드리겠습니다.
+
+---
+
 
 ## 1. Priority Queue(우선순위큐)란?
 
@@ -75,7 +88,7 @@ public class Heap {
     public Heap(int capacity) {
         this.heap = new int[capacity];
     }
-    
+
     // heap 출력
     public void printHeap() {
         System.out.print("[ ");
@@ -137,7 +150,7 @@ Heap의 삽입은 아래와 같은 과정을 거치게 된다.
 
 1. 배열 heap이 차있다면 `RuntimeException`을 던지고, 그렇지 않다면 삽입을 수행한다.
 2. 항목을 삽입하고, 배열의 사이즈 변수인 `heapSize`을 1증가 시킨다.
-3. `fixUp()`메서드를 통해 새로 삽입된 항목으로 인해 heap 속성을 위반하는지 확인하고, 
+3. `fixUp()`메서드를 통해 새로 삽입된 항목으로 인해 heap 속성을 위반하는지 확인하고,
 위반한 경우 heap 속성을 재구성 작업을 수행한다.
 
 ### 3.2 삭제 관련 메서드
@@ -165,17 +178,17 @@ private void fixDown(int index) {
     int indexLeft = 2 * index + 1;  // 왼쪽 하위노드 인덱스 계산
     int indexRight = 2 * index + 2; // 오른쪽 하위노드 인덱스 계산
     int indexLargest = index;       // 상위 노드의 인덱스
-    
+
     // 왼쪽 하위노드가 상위노드보다 큰 경우
     if (indexLeft < heapSize && heap[indexLeft] > heap[index]) {
         indexLargest = indexLeft;
     }
-    
+
     // 오른쪽 하위노드가 왼쪽 하위노드보다 큰 경우
     if (indexRight < heapSize && heap[indexRight] > heap[indexLargest]) {
         indexLargest = indexRight;
     }
-    
+
     // 왼쪽 or 오른쪽 하위노드가 상위노드보다 큰 경우
     if (index != indexLargest) {
         swap(index, indexLargest); // 교환 수행
@@ -215,7 +228,7 @@ public class App {
     public static void main(String[] args) {
 
         Heap heap = new Heap(8); // 힙 생성
-        
+
         // 삽입
         heap.insert(20);
         heap.insert(4);
