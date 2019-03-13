@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Git - JPA란???
+title: JPA - JPA Introduction
 category: JPA
 tags: JPA
 key: 20190313a
