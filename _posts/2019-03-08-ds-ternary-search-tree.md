@@ -6,11 +6,6 @@ tags: data-structure Ternary Search Tree
 key: 20190308a
 ---
 
-<!--more-->
-
-> 본 글은 [Udemy의 자바 자료구조 강의](https://www.udemy.com/algorithms-and-data-structures/)를 듣고 개인적으로
-학습한 내용 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다. 오류가 있다면 지적 부탁 드리겠습니다.
-
 ## 1. Trie와 TST(Ternary Search Tree) 비교 및 특징
 
 ![tst-pic](https://github.com/walbatrossw/java-data-structures/blob/master/ch14-ternary-search-tree/img/tst-pic.png?raw=true)
@@ -268,3 +263,8 @@ public class App {
 5
 null
 ```
+
+## 4. Reference
+
+본 글은 [Udemy의 자바 자료구조 강의](https://www.udemy.com/algorithms-and-data-structures/)를 듣고 개인적으로
+학습한 내용 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다. 오류가 있다면 지적 부탁 드리겠습니다.

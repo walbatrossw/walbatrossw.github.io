@@ -7,7 +7,6 @@ tags: java java-basic
 key: 20170131c # for gitalk
 ---
 
-<!--more-->
 
 ## 1. 변수의 초기화
 
@@ -316,3 +315,7 @@ class Document {
 문서 스프링.txt가 생성됨.
 문서 제목없음4가 생성됨.
 ```
+
+## 5. Reference
+
+본 내용은 자바의 정석 3rd Edition을 참고하여 작성되었습니다. 개인적으로 학습한 내용을 복습하기 목적이기 때문에 내용상 오류가 있을 수 있습니다.

@@ -6,11 +6,6 @@ tags: JPA
 key: 20190315a
 ---
 
-<!--more-->
-
-> 본 글은 [자바 ORM 표준 JPA 프로그래밍](https://book.naver.com/bookdb/book_detail.nhn?bid=9252528)를 읽고 개인적으로
-학습한 내용 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다. 오류가 있다면 지적 부탁 드리겠습니다.
-
 # JPA - 엔티티 매핑
 
 JPA를 사용할 때 엔티티와 테이블을 정확하게 매핑하는 것이 가장 중요하다. JPA는 매핑 어노테이션을 지원하는데
@@ -1018,3 +1013,8 @@ public class Member {
   - `@Transient`
 - 필드, 프로퍼티 접근
   - `@Access`
+
+## 8. References
+
+본 글은 [자바 ORM 표준 JPA 프로그래밍](https://book.naver.com/bookdb/book_detail.nhn?bid=9252528)를 읽고 개인적으로
+학습한 내용 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다. 오류가 있다면 지적 부탁 드리겠습니다.

@@ -6,12 +6,6 @@ tags: JPA
 key: 20190314a
 ---
 
-<!--more-->
-
-> 본 글은 [자바 ORM 표준 JPA 프로그래밍](https://book.naver.com/bookdb/book_detail.nhn?bid=9252528)를 읽고 개인적으로
-학습한 내용 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다. 오류가 있다면 지적 부탁 드리겠습니다.
-
-
 # JPA - 영속성 관리
 
 ## 1. 영속성 컨텍스트 기본 개념
@@ -475,3 +469,8 @@ Member newMember = entityManager.merge(member); // 엔티티 병합
   - 지연로딩 :
 - 플러시 : 트랜잭션 커밋할 때 영속성 컨텍스트가 플러시되고 DB에 변경사항을 동기화
 - 준영속 상태에서는 영속성 컨텍스트가 제공하는 기능을 사용하지 못함
+
+## 7. References
+
+본 글은 [자바 ORM 표준 JPA 프로그래밍](https://book.naver.com/bookdb/book_detail.nhn?bid=9252528)를 읽고 개인적으로
+학습한 내용 복습하기 위해 작성된 글로 내용상 오류가 있을 수 있습니다. 오류가 있다면 지적 부탁 드리겠습니다.

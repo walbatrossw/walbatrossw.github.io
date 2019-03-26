@@ -257,3 +257,7 @@ class Point3D2 extends Point2 {
 ```
 
 `Point3D2`클래스의 인스턴스를 생성하면 `Point3D2()`가 호출되고, `Point3D2()`는 `Point3D2(int x, int y, int z)`를 호출한다. 그리고 `Point3D2(int x, int y, int z)`는 조상 클래스인 `Point2`의 `Point2(int x, int y)`를 호출하여 초기화 작업을 수행한다. `Point2(int x, int y)`는 조상 클래스인 `Object`의 `Object()`를 호출하게 된다.
+
+## 6. References
+
+본 내용은 자바의 정석 3rd Edition을 참고하여 작성되었습니다. 개인적으로 학습한 내용을 복습하기 목적이기 때문에 내용상 오류가 있을 수 있습니다.
